@@ -45,39 +45,16 @@ export class ListView {
     }
   }
 
-
-  // {
-  // "updateMask" ：{
-  //   object（DocumentMask）
-  // } 、
-  // "currentDocument" ：{
-  //   object（Precondition）
-  // } 、
-
-  // //ユニオンフィールドoperationは次のいずれかになります：
-  // "update" ：{
-  //   object（Document）
-  // } 、
-  // "delete" ：string 、
-  // "transform" ：{
-  //   object（DocumentTransform）
-  // }
-  //
-  //ユニオンフィールドの可能なタイプのリストの終わりoperation。
-  // }
-
   // buttonがクリックされたとき
   public buttonClick() {
-    axios.post('documents:commit', {
-      update: {
-        name: 'projects/friend-list-app-80ca0/databases/(default)/documents/users/2zvC6qdeajc4rzvMdvwv',
-        fields: {
-          name: {
-            stringValue: 'Foo'
-          },
-          favorite: {
-            stringValue: 'Bar'
-          }
+    // 追加処理
+    axios.post('users', {
+      fields: {
+        name: {
+          stringValue: 'Foo'
+        },
+        favorite: {
+          stringValue: 'Bar'
         }
       }
     })
@@ -97,7 +74,7 @@ export class ListView {
   private async getFriendList() {
 
     return await axios
-      .get('documents/users')
+      .get('users')
       .then(response => {
         console.log(response.data.documents)
 
