@@ -65,6 +65,34 @@ export class ListView {
         console.log(error)
       })
   }
+  // public buttonClick() {
+  //   // 更新処理
+  //   axios.post(':commit', {
+  //     writes: [
+  //       {
+  //         updateMask: {
+  //           fieldPaths: [
+  //             "favorite"
+  //           ]
+  //         },
+  //         update: {
+  //           name: "projects/YOUR_PROJECT_ID/databases/(default)/documents/users/2zvC6qdeajc4rzvMdvwv",
+  //           fields: {
+  //             favorite: {
+  //               stringValue: "マヌルネコ"
+  //             }
+  //           }
+  //         }
+  //       }
+  //     ]
+  //   })
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
 
   //#endregion
 
