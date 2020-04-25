@@ -72,20 +72,34 @@ export class ListView {
   //       {
   //         updateMask: {
   //           fieldPaths: [
+  //             "name",
   //             "favorite"
   //           ]
   //         },
   //         update: {
   //           name: "projects/YOUR_PROJECT_ID/databases/(default)/documents/users/2zvC6qdeajc4rzvMdvwv",
   //           fields: {
+  //             name: {
+  //               stringValue: "update-test"
+  //             },
   //             favorite: {
-  //               stringValue: "マヌルネコ"
+  //               stringValue: "foo bar"
   //             }
   //           }
   //         }
   //       }
   //     ]
   //   })
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
+  // public buttonClick() {
+  //   // 削除処理
+  //   axios.delete('users/2zvC6qdeajc4rzvMdvwv')
   //     .then(response => {
   //       console.log(response)
   //     })
